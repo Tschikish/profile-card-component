@@ -18,12 +18,9 @@
 
 body {
   height: 100%;
-  background: var(--dark-cyan);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-image: url("/images/bg-pattern-top.svg"),
-    url("/images/bg-pattern-bottom.svg");
-  background-position: -200px -500px, 750px 400px;
+  background: url(./images/bg-pattern-top.svg) calc((50vw - 100vh)) -50vh no-repeat,
+    url(./images/bg-pattern-bottom.svg) 50vw 50vh no-repeat var(--dark-cyan);
+  background-size: auto 100vh;
 
   font-family: "Kumbh Sans", sans-serif;
 }
@@ -41,12 +38,14 @@ width: 350px;
 */
 
 .card {
+  min-width: 375px;
   border-radius: 22px;
   height: 375px;
   width: 350px;
   background-color: white;
   overflow: hidden;
   text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .top {
@@ -60,7 +59,7 @@ width: 350px;
   padding: 0 20px 25px;
 }
 
-.image {
+.profile-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -73,13 +72,14 @@ width: 350px;
 display:block;
 */
 
-.img img {
+.image-victor {
+  display: block;
   width: 100%;
   height: auto;
 }
 
 .name-age {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -98,13 +98,13 @@ display:block;
 .place,
 .name {
   font-weight: 400;
-  color: var(--dark-gray);
+  color: hsl(0, 0%, 59%);
   opacity: 0.75;
 }
 
 .bottom {
   display: flex;
-  border-top: 1px solid var(--dark-gray);
+  border-top: 1px solid hsl(0, 0%, 59%);
   justify-content: space-around;
   height: 90px;
   padding: 0px 25px;
@@ -128,4 +128,12 @@ display:block;
   font-size: 0.7rem;
   letter-spacing: 1px;
   margin-top: 7px;
+}
+
+.name-age,
+.val {
+  color: hsl(233, 13%, 28%);
+}
+
+.card:hover {
 }
