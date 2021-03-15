@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* Custom variables */
+
+:root {
+  /* Background*/
+  --dark-cyan: hsl(185, 75%, 39%);
+  --vd-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background: var(--dark-cyan);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("/images/bg-pattern-top.svg"),
+    url("/images/bg-pattern-bottom.svg");
+  background-position: -200px -500px, 750px 400px;
+
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+height: 375px;
+width: 350px;
+*/
+
+.card {
+  border-radius: 22px;
+  height: 375px;
+  width: 350px;
+  background-color: white;
+  overflow: hidden;
+  text-align: center;
+}
+
+.top {
+  background-image: url("/images/bg-pattern-card.svg");
+  height: 140px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.middle {
+  padding: 0 20px 25px;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+  overflow: hidden;
+  margin: -55px auto 20px auto;
+}
+
+/*
+display:block;
+*/
+
+.img img {
+  width: 100%;
+  height: auto;
+}
+
+.name-age {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.age {
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.place {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.age,
+.place,
+.name {
+  font-weight: 400;
+  color: var(--dark-gray);
+  opacity: 0.75;
+}
+
+.bottom {
+  display: flex;
+  border-top: 1px solid var(--dark-gray);
+  justify-content: space-around;
+  height: 90px;
+  padding: 0px 25px;
+}
+
+.bottom .item {
+  display: flex;
+  flex: 1;
+  height: 90px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom .item .val {
+  font-size: 1rem;
+  margin-bottom: 6 px;
+}
+
+.bottom .item .name {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  margin-top: 7px;
+}
